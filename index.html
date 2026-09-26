@@ -27,8 +27,8 @@
   <nav class="nav-links" aria-label="Primary">
     <a href="#about">About</a>
     <a href="#work">Portfolio</a>
-    <a href="#services">Services</a>
     <a href="#films">Films</a>
+    <a href="#services">Services</a>
     <a href="#club">Club</a>
     <a href="#commercial">Commercial</a>
   </nav>
@@ -39,9 +39,9 @@
 <div class="menu" id="menu" aria-hidden="true">
   <a href="#about">About</a>
   <a href="#work">Portfolio</a>
+  <a href="#films">Films</a>
   <a href="#services">Services</a>
   <a href="#weddings">Weddings</a>
-  <a href="#films">Films</a>
   <a href="#club">Club Nights</a>
   <a href="#commercial">Commercial</a>
   <a href="#contact"><em>Get in touch</em></a>
@@ -162,6 +162,52 @@
   <div class="more-wrap"><button class="btn-line" id="more">Load more</button></div>
 </section>
 
+<!-- ============ FILMS ============ -->
+<section class="films" id="films">
+  <header class="sec-head light reveal">
+    <p class="eyebrow">Films &amp; Reels</p>
+    <h2 class="display"><em>Moments</em> in Motion</h2>
+    <p class="sec-sub">Cinematic wedding films and fast-turnaround event reels, shot and edited in-house. Tap any clip to watch with sound.</p>
+  </header>
+
+  <div class="film-tabs" role="tablist">
+    <button class="on" data-ft="wed">Weddings &amp; Portraits</button>
+    <button data-ft="pre">Pre-Wedding</button>
+    <button data-ft="corp">Corporate &amp; Events</button>
+  </div>
+
+  <div class="film-set on" data-set="wed">
+    <div class="film-feature">
+      <button class="clip wide" data-src="assets/video/wed-bride.mp4"><video muted loop playsinline preload="none" poster="assets/video/wed-bride.jpg"><source data-src="assets/video/wed-bride.mp4" type="video/mp4"></video><span class="clip-label">Bridal Entry <em>· highlight</em></span><span class="play">▶</span></button>
+      <button class="clip tall" data-src="assets/video/wed-haldi.mp4"><video muted loop playsinline preload="none" poster="assets/video/wed-haldi.jpg"><source data-src="assets/video/wed-haldi.mp4" type="video/mp4"></video><span class="clip-label">Haldi <em>· reel</em></span><span class="play">▶</span></button>
+      <button class="clip tall" data-src="assets/video/portrait-saree.mp4"><video muted loop playsinline preload="none" poster="assets/video/portrait-saree.jpg"><source data-src="assets/video/portrait-saree.mp4" type="video/mp4"></video><span class="clip-label">Saree Portraits <em>· reel</em></span><span class="play">▶</span></button>
+    </div>
+    <div class="film-row">
+      <button class="clip wide" data-src="assets/video/wed-varmala.mp4"><video muted loop playsinline preload="none" poster="assets/video/wed-varmala.jpg"><source data-src="assets/video/wed-varmala.mp4" type="video/mp4"></video><span class="clip-label">Varmala <em>· candid film</em></span><span class="play">▶</span></button>
+      <button class="clip wide" data-src="assets/video/wed-stage.mp4"><video muted loop playsinline preload="none" poster="assets/video/wed-stage.jpg"><source data-src="assets/video/wed-stage.mp4" type="video/mp4"></video><span class="clip-label">Grand Entrance <em>· stage</em></span><span class="play">▶</span></button>
+      <button class="clip wide" data-src="assets/video/wed-decor.mp4"><video muted loop playsinline preload="none" poster="assets/video/wed-decor.jpg"><source data-src="assets/video/wed-decor.mp4" type="video/mp4"></video><span class="clip-label">The Venue <em>· décor film</em></span><span class="play">▶</span></button>
+    </div>
+  </div>
+
+  <div class="film-set" data-set="pre">
+    <div class="film-pair">
+      <button class="clip wide" data-src="assets/video/prewed-city.mp4"><video muted loop playsinline preload="none" poster="assets/video/prewed-city.jpg"><source data-src="assets/video/prewed-city-preview.mp4" type="video/mp4"></video><span class="clip-badge">Full film</span><span class="clip-label">Kolkata Love Story <em>· Victoria Memorial &amp; Howrah</em></span><span class="play">▶</span></button>
+      <button class="clip wide" data-src="assets/video/prewed-river.mp4"><video muted loop playsinline preload="none" poster="assets/video/prewed-river.jpg"><source data-src="assets/video/prewed-river-preview.mp4" type="video/mp4"></video><span class="clip-badge">Full film</span><span class="clip-label">By the River <em>· Hooghly riverside</em></span><span class="play">▶</span></button>
+    </div>
+  </div>
+
+  <div class="film-set" data-set="corp">
+    <div class="reels">
+      <button class="clip tall" data-src="assets/video/corp-britannia.mp4"><video muted loop playsinline preload="none" poster="assets/video/corp-britannia.jpg"><source data-src="assets/video/corp-britannia.mp4" type="video/mp4"></video><span class="clip-label">Brand Stage Show</span><span class="play">▶</span></button>
+      <button class="clip tall" data-src="assets/video/corp-dance.mp4"><video muted loop playsinline preload="none" poster="assets/video/corp-dance.jpg"><source data-src="assets/video/corp-dance.mp4" type="video/mp4"></video><span class="clip-label">Cultural Performance</span><span class="play">▶</span></button>
+      <button class="clip tall" data-src="assets/video/corp-live.mp4"><video muted loop playsinline preload="none" poster="assets/video/corp-live.jpg"><source data-src="assets/video/corp-live.mp4" type="video/mp4"></video><span class="clip-label">Live Concert</span><span class="play">▶</span></button>
+      <button class="clip tall" data-src="assets/video/corp-dj.mp4"><video muted loop playsinline preload="none" poster="assets/video/corp-dj.jpg"><source data-src="assets/video/corp-dj.mp4" type="video/mp4"></video><span class="clip-label">Artist Night</span><span class="play">▶</span></button>
+      <button class="clip tall" data-src="assets/video/corp-brand.mp4"><video muted loop playsinline preload="none" poster="assets/video/corp-brand.jpg"><source data-src="assets/video/corp-brand.mp4" type="video/mp4"></video><span class="clip-label">Event Highlights</span><span class="play">▶</span></button>
+    </div>
+    <p class="swipe-hint">Swipe for more →</p>
+  </div>
+</section>
+
 <!-- ============ SERVICES ============ -->
 <section class="services" id="services">
   <header class="sec-head reveal">
@@ -263,52 +309,6 @@
         <p class="stamp-sub">Haldi &amp; sangeet</p>
       </button>
     </div>
-  </div>
-</section>
-
-<!-- ============ FILMS ============ -->
-<section class="films" id="films">
-  <header class="sec-head light reveal">
-    <p class="eyebrow">Films &amp; Reels</p>
-    <h2 class="display"><em>Moments</em> in Motion</h2>
-    <p class="sec-sub">Cinematic wedding films and fast-turnaround event reels, shot and edited in-house. Tap any clip to watch with sound.</p>
-  </header>
-
-  <div class="film-tabs" role="tablist">
-    <button class="on" data-ft="wed">Weddings &amp; Portraits</button>
-    <button data-ft="pre">Pre-Wedding</button>
-    <button data-ft="corp">Corporate &amp; Events</button>
-  </div>
-
-  <div class="film-set on" data-set="wed">
-    <div class="film-feature">
-      <button class="clip wide" data-src="assets/video/wed-bride.mp4"><video muted loop playsinline preload="none" poster="assets/video/wed-bride.jpg"><source data-src="assets/video/wed-bride.mp4" type="video/mp4"></video><span class="clip-label">Bridal Entry <em>· highlight</em></span><span class="play">▶</span></button>
-      <button class="clip tall" data-src="assets/video/wed-haldi.mp4"><video muted loop playsinline preload="none" poster="assets/video/wed-haldi.jpg"><source data-src="assets/video/wed-haldi.mp4" type="video/mp4"></video><span class="clip-label">Haldi <em>· reel</em></span><span class="play">▶</span></button>
-      <button class="clip tall" data-src="assets/video/portrait-saree.mp4"><video muted loop playsinline preload="none" poster="assets/video/portrait-saree.jpg"><source data-src="assets/video/portrait-saree.mp4" type="video/mp4"></video><span class="clip-label">Saree Portraits <em>· reel</em></span><span class="play">▶</span></button>
-    </div>
-    <div class="film-row">
-      <button class="clip wide" data-src="assets/video/wed-varmala.mp4"><video muted loop playsinline preload="none" poster="assets/video/wed-varmala.jpg"><source data-src="assets/video/wed-varmala.mp4" type="video/mp4"></video><span class="clip-label">Varmala <em>· candid film</em></span><span class="play">▶</span></button>
-      <button class="clip wide" data-src="assets/video/wed-stage.mp4"><video muted loop playsinline preload="none" poster="assets/video/wed-stage.jpg"><source data-src="assets/video/wed-stage.mp4" type="video/mp4"></video><span class="clip-label">Grand Entrance <em>· stage</em></span><span class="play">▶</span></button>
-      <button class="clip wide" data-src="assets/video/wed-decor.mp4"><video muted loop playsinline preload="none" poster="assets/video/wed-decor.jpg"><source data-src="assets/video/wed-decor.mp4" type="video/mp4"></video><span class="clip-label">The Venue <em>· décor film</em></span><span class="play">▶</span></button>
-    </div>
-  </div>
-
-  <div class="film-set" data-set="pre">
-    <div class="film-pair">
-      <button class="clip wide" data-src="assets/video/prewed-city.mp4"><video muted loop playsinline preload="none" poster="assets/video/prewed-city.jpg"><source data-src="assets/video/prewed-city-preview.mp4" type="video/mp4"></video><span class="clip-badge">Full film</span><span class="clip-label">Kolkata Love Story <em>· Victoria Memorial &amp; Howrah</em></span><span class="play">▶</span></button>
-      <button class="clip wide" data-src="assets/video/prewed-river.mp4"><video muted loop playsinline preload="none" poster="assets/video/prewed-river.jpg"><source data-src="assets/video/prewed-river-preview.mp4" type="video/mp4"></video><span class="clip-badge">Full film</span><span class="clip-label">By the River <em>· Hooghly riverside</em></span><span class="play">▶</span></button>
-    </div>
-  </div>
-
-  <div class="film-set" data-set="corp">
-    <div class="reels">
-      <button class="clip tall" data-src="assets/video/corp-britannia.mp4"><video muted loop playsinline preload="none" poster="assets/video/corp-britannia.jpg"><source data-src="assets/video/corp-britannia.mp4" type="video/mp4"></video><span class="clip-label">Brand Stage Show</span><span class="play">▶</span></button>
-      <button class="clip tall" data-src="assets/video/corp-dance.mp4"><video muted loop playsinline preload="none" poster="assets/video/corp-dance.jpg"><source data-src="assets/video/corp-dance.mp4" type="video/mp4"></video><span class="clip-label">Cultural Performance</span><span class="play">▶</span></button>
-      <button class="clip tall" data-src="assets/video/corp-live.mp4"><video muted loop playsinline preload="none" poster="assets/video/corp-live.jpg"><source data-src="assets/video/corp-live.mp4" type="video/mp4"></video><span class="clip-label">Live Concert</span><span class="play">▶</span></button>
-      <button class="clip tall" data-src="assets/video/corp-dj.mp4"><video muted loop playsinline preload="none" poster="assets/video/corp-dj.jpg"><source data-src="assets/video/corp-dj.mp4" type="video/mp4"></video><span class="clip-label">Artist Night</span><span class="play">▶</span></button>
-      <button class="clip tall" data-src="assets/video/corp-brand.mp4"><video muted loop playsinline preload="none" poster="assets/video/corp-brand.jpg"><source data-src="assets/video/corp-brand.mp4" type="video/mp4"></video><span class="clip-label">Event Highlights</span><span class="play">▶</span></button>
-    </div>
-    <p class="swipe-hint">Swipe for more →</p>
   </div>
 </section>
 
@@ -436,7 +436,7 @@
 <footer class="foot">
   <img src="assets/logo-full.png" alt="Creation Memories Photography" class="foot-logo" loading="lazy">
   <nav class="foot-nav">
-    <a href="#about">About</a><a href="#services">Services</a><a href="#work">Portfolio</a><a href="#films">Films</a><a href="#commercial">Commercial</a><a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#work">Portfolio</a><a href="#films">Films</a><a href="#services">Services</a><a href="#club">Club</a><a href="#commercial">Commercial</a><a href="#contact">Contact</a>
   </nav>
   <p class="foot-small">© <span id="yr">2026</span> Creation Memories Photography · Kolkata · Serving Pan India</p>
 </footer>
