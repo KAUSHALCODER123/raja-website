@@ -217,6 +217,9 @@ ul,ol{list-style:none}
 .film-feature{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .film-feature .clip.wide{grid-column:1/-1;aspect-ratio:16/9}
 .film-feature .clip.tall{aspect-ratio:9/16}
+.film-pair{display:grid;gap:10px}
+.film-pair .clip{aspect-ratio:16/9}
+.clip-badge{position:absolute;z-index:1;top:10px;left:10px;font-size:.56rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:rgba(241,236,228,.92);color:var(--espresso);padding:4px 10px;border-radius:20px}
 .film-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
 .film-row .clip{aspect-ratio:16/9}
 .film-row .clip:last-child{grid-column:1/-1}
@@ -461,6 +464,7 @@ ul,ol{list-style:none}
   .film-feature{grid-template-columns:1fr auto auto;gap:12px;height:clamp(300px,40vw,560px)}
   .film-feature .clip.wide{grid-column:auto;aspect-ratio:auto;height:100%}
   .film-feature .clip.tall{height:100%;width:auto;aspect-ratio:9/16}
+  .film-pair{grid-template-columns:1fr 1fr;gap:12px}
   .film-row{grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
   .film-row .clip:last-child{grid-column:auto}
   .film-row .clip-label em{display:inline}
