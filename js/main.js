@@ -161,6 +161,21 @@
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
   });
 
+  /* ---------- count-up for the facts band ---------- */
+  const cio = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    cio.unobserve(e.target);
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const el = e.target, end = +el.dataset.count, t0 = performance.now(), dur = 1600;
+    const tick = t => {
+      const k = Math.min(1, (t - t0) / dur);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }), { threshold: 0.6 });
+  $$('[data-count]').forEach(el => cio.observe(el));
+
   /* ---------- keep faces in frame wherever an image is cropped ---------- */
   const key = src => (src.split('/').pop() || '').replace(/\.jpg.*$/, '');
   const focus = el => {
