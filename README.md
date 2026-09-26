@@ -14,7 +14,7 @@ A static, mobile-first site (plain HTML, CSS and JavaScript, with no build step)
 
 ## Adding photos
 Put a 1600px version in `assets/img/full/` and a 700px version in `assets/img/thumb/` with the same file name,
-then add a line to `js/photos.js`. Categories: `wedding`, `prewedding`, `celebration`, `commercial`, `design`.
+then add a line to `js/photos.js`. Categories: `wedding`, `prewedding`, `celebration`, `club`, `commercial`, `design`.
 
 ## Run locally
 ```

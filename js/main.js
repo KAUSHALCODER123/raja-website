@@ -3,7 +3,7 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const WHATSAPP = '919064724671';
-  const CAT_LABEL = { wedding: 'Wedding', prewedding: 'Pre-Wedding', celebration: 'Haldi & Sangeet', commercial: 'Product', design: 'Edit & Design' };
+  const CAT_LABEL = { wedding: 'Wedding', prewedding: 'Pre-Wedding', celebration: 'Haldi & Sangeet', commercial: 'Product', design: 'Edit & Design', club: 'Club & Nightlife' };
 
   /* ---------- nav ---------- */
   const nav = $('#nav'), burger = $('#burger'), menu = $('#menu');
@@ -38,7 +38,7 @@
   function mixed() {
     const buckets = {};
     PHOTOS.forEach(p => (buckets[p[1]] = buckets[p[1]] || []).push(p));
-    const order = ['wedding', 'prewedding', 'wedding', 'celebration', 'commercial', 'wedding', 'prewedding', 'design'];
+    const order = ['wedding', 'prewedding', 'club', 'wedding', 'celebration', 'commercial', 'wedding', 'prewedding', 'club', 'design'];
     const out = [];
     while (out.length < PHOTOS.length) {
       for (const c of order) if (buckets[c] && buckets[c].length) out.push(buckets[c].shift());
@@ -87,6 +87,12 @@
     document.body.style.overflow = '';
     setTimeout(() => { stage.innerHTML = ''; }, 350);
   }
+  // club reel: open that photo in the lightbox, within the Club set
+  $$('[data-club]').forEach(b => b.addEventListener('click', () => {
+    setFilter('club');
+    showImg(list.findIndex(p => p[0] === b.dataset.club));
+    open(false);
+  }));
   grid.addEventListener('click', e => {
     const t = e.target.closest('.tile'); if (!t) return;
     e.preventDefault(); showImg(+t.dataset.i); open(false);
@@ -153,6 +159,17 @@
       f.get('msg') ? `Details: ${f.get('msg')}` : ''
     ].filter(Boolean);
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
+  });
+
+  /* ---------- keep faces in frame wherever an image is cropped ---------- */
+  const key = src => (src.split('/').pop() || '').replace(/\.jpg.*$/, '');
+  const focus = el => {
+    const f = FOCUS[key(el.currentSrc || el.getAttribute('src') || el.getAttribute('poster') || '')];
+    if (f && getComputedStyle(el).objectFit === 'cover') el.style.objectPosition = f;
+  };
+  $$('img, video[poster]').forEach(el => {
+    if (el.tagName === 'IMG' && !el.complete) el.addEventListener('load', () => focus(el), { once: true });
+    focus(el);
   });
 
   $('#yr').textContent = new Date().getFullYear();
