@@ -127,8 +127,8 @@
     if (e.isIntersecting && v.offsetParent) { load(v); v.play().catch(() => {}); }
     else v.pause();
   }), { threshold: 0.35 });
-  // Muted previews only on devices with a mouse; phones show posters and play on tap (saves data + battery)
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches || !matchMedia('(hover: hover)').matches;
+  // Muted previews play on every device (small preview files keep phone data low); tap opens the full film with sound
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduced) $$('.clip video').forEach(v => vio.observe(v));
 
   $$('.film-tabs button').forEach(b => b.addEventListener('click', () => {

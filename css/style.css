@@ -235,6 +235,10 @@ ul,ol{list-style:none}
 .clip-label{position:absolute;z-index:1;left:12px;bottom:10px;right:46px;font-family:var(--serif);text-transform:uppercase;font-size:.85rem;line-height:1.1}
 .clip-label em{text-transform:none;font-style:italic;opacity:.75;font-size:.85em}
 .film-row .clip-label em{display:none}
+.film-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.film-grid .clip{aspect-ratio:16/9}
+.film-grid .clip:first-child,.film-grid .clip:last-child{grid-column:1/-1}
+.film-grid .clip:not(:first-child):not(:last-child) .clip-label em{display:none}
 .play{position:absolute;z-index:1;right:10px;bottom:10px;width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.6);display:grid;place-items:center;font-size:.55rem;padding-left:2px;transition:.3s}
 
 /* ---------- CLUB & NIGHTLIFE ---------- */
@@ -471,6 +475,10 @@ ul,ol{list-style:none}
   .film-row{grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
   .film-row .clip:last-child{grid-column:auto}
   .film-row .clip-label em{display:inline}
+  .film-grid{grid-template-columns:repeat(3,1fr);gap:12px}
+  .film-grid .clip:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+  .film-grid .clip:last-child{grid-column:auto}
+  .film-grid .clip .clip-label em{display:inline}
   .reels{grid-auto-flow:row;grid-template-columns:repeat(5,1fr);grid-auto-columns:auto;gap:12px;overflow:visible;margin:0;padding:0}
   .swipe-hint{display:none}
   .clip-label{font-size:clamp(.9rem,1.4vw,1.15rem);left:14px;bottom:12px}
